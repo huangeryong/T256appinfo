@@ -25,37 +25,13 @@
   </head>
 
   <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
-
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form action="login.do" method="post">
-              <h1>后台管理系统</h1>
-              <div>
-                <input type="text" class="form-control" name="userCode" placeholder="请输入用户名" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" name="userPassword" placeholder="请输入密码" required="" />
-              </div>
-              <span>${error }</span>
-              <div>
-              	<button type="submit" class="btn btn-success">登     录</button>
-              	<button type="reset" class="btn btn-default">重　填</button>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <div>
-                  <p>©2016 All Rights Reserved. </p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
+    <div class="login_wrapper">
+      <h1>APP信息管理平台</h1>
+      <div>
+      <a href="manager/beforeLogin.do" class="btn btn-link">后台管理系统 入口</a>
+      </div>
+      <div>
+      <a href="dev/beforeLogin.do" class="btn btn-link">开发者平台 入口</a>
       </div>
     </div>
   </body>

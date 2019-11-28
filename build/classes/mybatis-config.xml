@@ -6,6 +6,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
     
     <typeAliases>
-       <package name="cn.bdqn.entity"/>
+       <package name="cn.sq.appinfo.entity"/>
     </typeAliases>
 </configuration>

@@ -1,25 +1,24 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
- * ¹ã¸æ±í
+ * å¹¿å‘Šè¡¨
  * @author Administrator
  *
  */
 public class Promotion {
-	
-	private Integer id; //±àºÅ
-	private Integer appId; //appId£¨À´Ô´ÓÚ£ºapp_info±íµÄÖ÷¼üid£©
-	private String adPicPath; //¹ã¸æÍ¼Æ¬´æ´¢Â·¾¶
-	private Integer adPv; //¹ã¸æµã»÷Á¿
-	private Integer carouselPosition; //ÂÖ²¥Î»£¨1-n£©
-	private Date startTime; //ÆğĞ§Ê±¼ä
-	private Date endTime; //Ê§Ğ§Ê±¼ä
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date createtionDate; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
+	private Integer id;//ä¸»é”®ID
+	private Integer appId;//appId
+	private String adPicPath;//å¹¿å‘Šå›¾ç‰‡å­˜å‚¨è·¯å¾„
+	private Integer adPV;//å¹¿å‘Šç‚¹å‡»é‡
+	private Integer carouselPosition;//è½®æ’­ä½ï¼ˆ1-nï¼‰
+	private Date startTime;//å¹¿å‘Šèµ·æ•ˆæ—¶é—´
+	private Date endTime;//å¹¿å‘Šå¤±æ•ˆæ—¶é—´
+	private Integer createdBy;//åˆ›å»ºè€…
+	private Date creationDate;//åˆ›å»ºæ—¶é—´
+	private Integer modifyBy;//æ›´æ–°è€…
+	private Date modifyDate;//æ›´æ–°æ—¶é—´
 	public Integer getId() {
 		return id;
 	}
@@ -38,11 +37,11 @@ public class Promotion {
 	public void setAdPicPath(String adPicPath) {
 		this.adPicPath = adPicPath;
 	}
-	public Integer getAdPv() {
-		return adPv;
+	public Integer getAdPV() {
+		return adPV;
 	}
-	public void setAdPv(Integer adPv) {
-		this.adPv = adPv;
+	public void setAdPV(Integer adPV) {
+		this.adPV = adPV;
 	}
 	public Integer getCarouselPosition() {
 		return carouselPosition;
@@ -68,11 +67,11 @@ public class Promotion {
 	public void setCreatedBy(Integer createdBy) {
 		this.createdBy = createdBy;
 	}
-	public Date getCreatetionDate() {
-		return createtionDate;
+	public Date getCreationDate() {
+		return creationDate;
 	}
-	public void setCreatetionDate(Date createtionDate) {
-		this.createtionDate = createtionDate;
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 	public Integer getModifyBy() {
 		return modifyBy;
@@ -80,26 +79,26 @@ public class Promotion {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
-	public Promotion(Integer id, Integer appId, String adPicPath, Integer adPv, Integer carouselPosition,
-			Date startTime, Date endTime, Integer createdBy, Date createtionDate, Integer modifyBy, Date dateTime) {
+	public Promotion(Integer id, Integer appId, String adPicPath, Integer adPV, Integer carouselPosition,
+			Date startTime, Date endTime, Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate) {
 		super();
 		this.id = id;
 		this.appId = appId;
 		this.adPicPath = adPicPath;
-		this.adPv = adPv;
+		this.adPV = adPV;
 		this.carouselPosition = carouselPosition;
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.createdBy = createdBy;
-		this.createtionDate = createtionDate;
+		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
 	}
 	public Promotion() {
 		super();

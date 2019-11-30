@@ -1,22 +1,22 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
- * APPËùÊô·ÖÀà±í
+ * åˆ†ç±»è¡¨
  * @author Administrator
  *
  */
 public class Category {
+	private Integer id;//ä¸»é”®id
+	private String categoryCode;//åˆ†ç±»ç¼–ç 
+	private String categoryName;//åˆ†ç±»åç§°
+	private Integer parentId;//çˆ¶çº§èŠ‚ç‚¹id
+	private Integer createdBy;//åˆ›å»ºè€…
+	private Date creationDate;//åˆ›å»ºæ—¶é—´
+	private Integer modifyBy;//æ›´æ–°è€…
+	private Date modifyDate;//æ›´æ–°æ—¶é—´
 	
-	private Integer id; //±àºÅ
-	private String categoryCode; //·ÖÀà±àÂë
-	private String categoryName; //·ÖÀàÃû³Æ
-	private Integer parentId; //¸¸¼¶½Úµãid
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date creationTime; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
 	public Integer getId() {
 		return id;
 	}
@@ -47,11 +47,11 @@ public class Category {
 	public void setCreatedBy(Integer createdBy) {
 		this.createdBy = createdBy;
 	}
-	public Date getCreationTime() {
-		return creationTime;
+	public Date getCreationDate() {
+		return creationDate;
 	}
-	public void setCreationTime(Date creationTime) {
-		this.creationTime = creationTime;
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 	public Integer getModifyBy() {
 		return modifyBy;
@@ -59,23 +59,23 @@ public class Category {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 	public Category(Integer id, String categoryCode, String categoryName, Integer parentId, Integer createdBy,
-			Date creationTime, Integer modifyBy, Date dateTime) {
+			Date creationDate, Integer modifyBy, Date modifyDate) {
 		super();
 		this.id = id;
 		this.categoryCode = categoryCode;
 		this.categoryName = categoryName;
 		this.parentId = parentId;
 		this.createdBy = createdBy;
-		this.creationTime = creationTime;
+		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
 	}
 	public Category() {
 		super();

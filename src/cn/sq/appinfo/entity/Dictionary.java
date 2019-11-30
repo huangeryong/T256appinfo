@@ -1,23 +1,23 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
- * Êı¾İ×Öµä±í
+ * æ•°æ®å­—å…¸è¡¨
  * @author Administrator
  *
  */
 public class Dictionary {
+	private Integer id;//ä¸»é”®id
+	private String typeCode;//ç±»å‹ç¼–ç 
+	private String typeName;//ç±»å‹åç§°
+	private Integer valueId;//ç±»å‹å€¼ID
+	private String valueName;//ç±»å‹å€¼name
+	private Integer createdBy;//åˆ›å»ºè€…
+	private Date creationDate;//åˆ›å»ºæ—¶é—´
+	private Integer modifyBy;//æ›´æ–°è€…
+	private Date modifyDate;//æ›´æ–°æ—¶é—´
 	
-	private Integer id; //±àºÅ
-	private String typeCode; //ÀàĞÍ±àÂë
-	private String typeName; //ÀàĞÍÃû³Æ
-	private Integer valueId; //ÀàĞÍÖµid
-	private String valueName; //ÀàĞÍÖµName
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date createtionDate; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
 	public Integer getId() {
 		return id;
 	}
@@ -54,11 +54,11 @@ public class Dictionary {
 	public void setCreatedBy(Integer createdBy) {
 		this.createdBy = createdBy;
 	}
-	public Date getCreatetionDate() {
-		return createtionDate;
+	public Date getCreationDate() {
+		return creationDate;
 	}
-	public void setCreatetionDate(Date createtionDate) {
-		this.createtionDate = createtionDate;
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 	public Integer getModifyBy() {
 		return modifyBy;
@@ -66,14 +66,14 @@ public class Dictionary {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 	public Dictionary(Integer id, String typeCode, String typeName, Integer valueId, String valueName,
-			Integer createdBy, Date createtionDate, Integer modifyBy, Date dateTime) {
+			Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate) {
 		super();
 		this.id = id;
 		this.typeCode = typeCode;
@@ -81,13 +81,14 @@ public class Dictionary {
 		this.valueId = valueId;
 		this.valueName = valueName;
 		this.createdBy = createdBy;
-		this.createtionDate = createtionDate;
+		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
 	}
 	public Dictionary() {
 		super();
 	}
+	
 	
 	
 }

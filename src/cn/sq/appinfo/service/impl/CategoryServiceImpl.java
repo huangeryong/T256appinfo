@@ -1,4 +1,4 @@
-package cn.sq.appinfo.service;
+package cn.sq.appinfo.service.impl;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import cn.sq.appinfo.dao.CategoryDao;
 import cn.sq.appinfo.entity.Category;
+import cn.sq.appinfo.service.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{

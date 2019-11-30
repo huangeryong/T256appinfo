@@ -6,6 +6,6 @@ import cn.sq.appinfo.entity.DevUser;
 
 public interface DevUserDao {
 		
-	//查询用户所有
+	//鐧诲綍鏂规硶
 	public DevUser getByDevCodeAndDevPassword(@Param("devCode")String devCode,@Param("devPassword")String devPassword);
 }

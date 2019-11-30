@@ -6,6 +6,6 @@ import cn.sq.appinfo.entity.BackendUser;
 
 public interface BackendUserDao {
 	
-	//查询系统管理员所有
+	//鐧诲綍鏂规硶
 	public BackendUser getBackUserByUserCodeAndUserPassword(@Param("userCode")String userCode,@Param("userPassword")String userPassword);
 }

@@ -1,28 +1,55 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
- * APP°æ±¾ĞÅÏ¢±í
+ * APPç‰ˆæœ¬ä¿¡æ¯è¡¨
  * @author Administrator
  *
  */
 public class Version {
+	private Integer id;//ä¸»é”®id
+	private Integer appId;//appId
+	private String versionNo;//ç‰ˆæœ¬å·
+	private String versionInfo;//ç‰ˆæœ¬æè¿°
+	private Integer publishStatus;//å‘å¸ƒçŠ¶æ€id
+	private String downloadLink;//apkæ–‡ä»¶ä¸‹è½½é“¾æ¥
+	private BigDecimal versionSize;//ç‰ˆæœ¬å¤§å°
+	private Integer createdBy;//åˆ›å»ºè€…
+	private Date creationDate;//åˆ›å»ºæ—¶é—´
+	private Integer modifyBy;//æ›´æ–°è€…
+	private Date modifyDate;//æ›´æ–°æ—¶é—´
+	private String apkLocPath;//apkæ–‡ä»¶çš„æœåŠ¡å™¨å­˜å‚¨è·¯å¾„
 	
-	private Integer id; //Ö÷¼üid
-	private Integer appId; //appId£¨À´Ô´ÓÚ£ºapp_info±íµÄÖ÷¼üid£©
-	private String versionNo; //°æ±¾ºÅ
-	private String versionInfo; //°æ±¾½éÉÜ
-	private Integer publishStatus; //·¢²¼×´Ì¬£¨À´Ô´ÓÚ£ºdata_dictionary£¬1 ²»·¢²¼ 2 ÒÑ·¢²¼ 3 Ô¤·¢²¼£©
-	private String downloadLink; //ÏÂÔØÁ´½Ó
-	private Integer versionSize; //°æ±¾´óĞ¡£¨µ¥Î»£ºM£©
-	private String apkLocPath; //apkÎÄ¼şµÄ·şÎñÆ÷´æ´¢Â·¾¶
-	private String apkFileName; //ÉÏ´«µÄapkÎÄ¼şÃû³Æ
+	private String appName;//APPè½¯ä»¶åç§°
+	private String publishStatusName;//å‘å¸ƒçŠ¶æ€åç§°
+	private String apkFileName;//ä¸Šä¼ çš„apkæ–‡ä»¶åç§°
 	
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date createtionDate; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
+	public String getApkFileName() {
+		return apkFileName;
+	}
+	public void setApkFileName(String apkFileName) {
+		this.apkFileName = apkFileName;
+	}
+	public String getPublishStatusName() {
+		return publishStatusName;
+	}
+	public void setPublishStatusName(String publishStatusName) {
+		this.publishStatusName = publishStatusName;
+	}
+	public String getAppName() {
+		return appName;
+	}
+	public void setAppName(String appName) {
+		this.appName = appName;
+	}
+	public String getApkLocPath() {
+		return apkLocPath;
+	}
+	public void setApkLocPath(String apkLocPath) {
+		this.apkLocPath = apkLocPath;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -59,23 +86,11 @@ public class Version {
 	public void setDownloadLink(String downloadLink) {
 		this.downloadLink = downloadLink;
 	}
-	public Integer getVersionSize() {
+	public BigDecimal getVersionSize() {
 		return versionSize;
 	}
-	public void setVersionSize(Integer versionSize) {
+	public void setVersionSize(BigDecimal versionSize) {
 		this.versionSize = versionSize;
-	}
-	public String getApkLocPath() {
-		return apkLocPath;
-	}
-	public void setApkLocPath(String apkLocPath) {
-		this.apkLocPath = apkLocPath;
-	}
-	public String getApkFileName() {
-		return apkFileName;
-	}
-	public void setApkFileName(String apkFileName) {
-		this.apkFileName = apkFileName;
 	}
 	public Integer getCreatedBy() {
 		return createdBy;
@@ -83,11 +98,11 @@ public class Version {
 	public void setCreatedBy(Integer createdBy) {
 		this.createdBy = createdBy;
 	}
-	public Date getCreatetionDate() {
-		return createtionDate;
+	public Date getCreationDate() {
+		return creationDate;
 	}
-	public void setCreatetionDate(Date createtionDate) {
-		this.createtionDate = createtionDate;
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 	public Integer getModifyBy() {
 		return modifyBy;
@@ -95,15 +110,15 @@ public class Version {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 	public Version(Integer id, Integer appId, String versionNo, String versionInfo, Integer publishStatus,
-			String downloadLink, Integer versionSize, String apkLocPath, String apkFileName, Integer createdBy,
-			Date createtionDate, Integer modifyBy, Date dateTime) {
+			String downloadLink, BigDecimal versionSize, Integer createdBy, Date creationDate, Integer modifyBy,
+			Date modifyDate, String apkLocPath, String appName, String publishStatusName, String apkFileName) {
 		super();
 		this.id = id;
 		this.appId = appId;
@@ -112,12 +127,14 @@ public class Version {
 		this.publishStatus = publishStatus;
 		this.downloadLink = downloadLink;
 		this.versionSize = versionSize;
-		this.apkLocPath = apkLocPath;
-		this.apkFileName = apkFileName;
 		this.createdBy = createdBy;
-		this.createtionDate = createtionDate;
+		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
+		this.apkLocPath = apkLocPath;
+		this.appName = appName;
+		this.publishStatusName = publishStatusName;
+		this.apkFileName = apkFileName;
 	}
 	public Version() {
 		super();

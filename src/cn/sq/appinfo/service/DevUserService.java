@@ -4,6 +4,6 @@ import cn.sq.appinfo.entity.DevUser;
 
 public interface DevUserService {
 		
-	//µÇÂ¼·½·¨
+	//ç™»å½•æ–¹æ³•
 	public DevUser login(String devCode,String devPassword);
 }

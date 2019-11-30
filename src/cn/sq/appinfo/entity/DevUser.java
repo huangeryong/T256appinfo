@@ -1,24 +1,37 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
-
+import java.io.Serializable;
+import java.util.Date;
 /**
- * ¿ª·¢ÕßÓÃ»§±í
- * @author Administrator
- *
+ * 
+ * å¼€å‘è€…å®ä½“ç±»
+ * 
  */
-public class DevUser {
-	
-	private Integer id; //±àºÅ
-	private String devCode; //¿ª·¢ÕßÕËºÅ
-	private String devName; //¿ª·¢ÕßÃû³Æ
-	private String devPassword; //¿ª·¢ÕßÃÜÂë
-	private String devEmail; //¿ª·¢Õßµç×ÓÓÊÏä
-	private String devInfo; //¿ª·¢Õß¼ò½é
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date createtionDate; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
+public class DevUser implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	//ä¸»é”®id
+	private Integer id;
+	//å¼€å‘è€…å¸å·
+	private String devCode;
+	//å¼€å‘è€…åç§°
+	private String devName;
+	//å¼€å‘è€…å¯†ç 
+	private String devPassword;
+	//å¼€å‘è€…ç”µå­é‚®ç®±
+	private String devEmail;
+	//å¼€å‘è€…ç®€ä»‹
+	private String devInfo;
+	//åˆ›å»ºè€…ï¼ˆæ¥æºäºbackend_userç”¨æˆ·è¡¨çš„ç”¨æˆ·idï¼‰
+	private Integer createdBy;
+	//åˆ›å»ºæ—¶é—´
+	private Date creationDate;
+	//æ›´æ–°è€…ï¼ˆæ¥æºäºbackend_userç”¨æˆ·è¡¨çš„ç”¨æˆ·idï¼‰  
+	private Integer modifyBy;
+	//æœ€æ–°æ›´æ–°æ—¶é—´  
+	private Date modifyDate;
 	public Integer getId() {
 		return id;
 	}
@@ -61,11 +74,11 @@ public class DevUser {
 	public void setCreatedBy(Integer createdBy) {
 		this.createdBy = createdBy;
 	}
-	public Date getCreatetionDate() {
-		return createtionDate;
+	public Date getCreationDate() {
+		return creationDate;
 	}
-	public void setCreatetionDate(Date createtionDate) {
-		this.createtionDate = createtionDate;
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
 	}
 	public Integer getModifyBy() {
 		return modifyBy;
@@ -73,14 +86,14 @@ public class DevUser {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 	public DevUser(Integer id, String devCode, String devName, String devPassword, String devEmail, String devInfo,
-			Integer createdBy, Date createtionDate, Integer modifyBy, Date dateTime) {
+			Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate) {
 		super();
 		this.id = id;
 		this.devCode = devCode;
@@ -89,13 +102,13 @@ public class DevUser {
 		this.devEmail = devEmail;
 		this.devInfo = devInfo;
 		this.createdBy = createdBy;
-		this.createtionDate = createtionDate;
+		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
 	}
 	public DevUser() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-	
 	
 }

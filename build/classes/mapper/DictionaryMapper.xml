@@ -3,6 +3,8 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.sq.appinfo.dao.DictionaryDao">
-
-
+	<!--根据类型查询所有信息-->
+	<select id="getFainAllDictionary" resultType="dictionary">
+		select * from dictionary where typeCode=#{typeCode}
+	</select>
 </mapper>

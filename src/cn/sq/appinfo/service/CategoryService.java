@@ -6,6 +6,6 @@ import cn.sq.appinfo.entity.Category;
 
 public interface CategoryService {
 	
-	//¸ù¾İ¸¸¼¶id²éÑ¯AppĞÅÏ¢
+	//æŸ¥è¯¢æ‰€æœ‰
 	public List<Category> getFindCategory(Integer parentId);
 }

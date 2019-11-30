@@ -11,7 +11,7 @@ import cn.sq.appinfo.entity.BackendUser;
 import cn.sq.appinfo.service.BackendUserService;
 
 /**
- * ºóÌ¨¿ØÖÆÆ÷
+ * åå°æ§åˆ¶å™¨
  * @author Administrator
  *
  */
@@ -21,30 +21,30 @@ public class BackendUserController {
 	
 	@Resource
 	private BackendUserService bs;
-	//Ìø×ªÈ¥ºóÌ¨¹ÜÀíµÇÂ¼Ò³Ãæ
+	//è·³è½¬å»ç™»å½•é¡µé¢
 	@RequestMapping("/beforeLogin")
 	public String beforeLogin() {
 		return "backendlogin";
 	}
 	
-	//µÇÂ¼ÑéÖ¤
+	//ç™»å½•æ–¹æ³•Ö¤
 	@RequestMapping("/login")
 	public String login(String userCode,String userPassword,Model mod,HttpSession session) {
-		//µ÷ÓÃµÇÂ¼ÑéÖ¤·½·¨
+		//è°ƒç”¨ç™»å½•æ–¹æ³•
 		BackendUser bu=bs.login(userCode, userPassword);
 		if(bu!=null) {
 			session.setAttribute("userSession", bu);
 			return "/backend/main";
 		}else {
-			mod.addAttribute("error", "ÓÃ»§Ãû»òÃÜÂë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£¡");
+			mod.addAttribute("error", "ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°ç™»å½•ï¼");
 			return "backendlogin";
 		}
 	}
 	
-	//×¢ÏúµÇÂ¼
+	//æ³¨é”€
 	@RequestMapping("/logOut")
 	public String logOut(HttpSession session) {
-		//Çå¿Õsession
+		//æ¸…ç©ºsession
 		session.invalidate();
 		return "backendlogin";
 	}

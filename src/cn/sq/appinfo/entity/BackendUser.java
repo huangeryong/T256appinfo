@@ -1,23 +1,34 @@
 package cn.sq.appinfo.entity;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
- * ºóÌ¨ÓÃ»§±í
- * @author Administrator
- *
+ * 
+ *ç®¡ç†å‘˜å®ä½“ç±»
+ * 
  */
-public class BackendUser {
+public class BackendUser implements Serializable{
 	
-	private Integer id; //±àºÅ
-	private String userCode; //ÓÃ»§±àÂë
-	private String userName; //ÓÃ»§ĞÕÃû
-	private Integer userType; //ÓÃ»§½ÇÉ«ÀàĞÍ£¨À´Ô´ÓÚÊı¾İ×Öµä±í£¬·ÖÎª£º³¬¹Ü¡¢²ÆÎñ¡¢ÊĞ³¡¡¢ÔËÓª¡¢ÏúÊÛ
-	private Integer createdBy; //´´½¨Õß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date creationDate; //´´½¨Ê±¼ä
-	private Integer modifyBy; //¸üĞÂÕß£¨À´Ô´ÓÚbackend_userÓÃ»§±íµÄÓÃ»§id£©
-	private Date dateTime; //×îĞÂ¸üĞÂÊ±¼ä
-	private String userPassword; //ÓÃ»§ÃÜÂë
+	private static final long serialVersionUID = 1L;
+	//ä¸»é”®id 
+	private Integer id;
+	//ç”¨æˆ·ç¼–ç   
+	private String userCode;
+	//ç”¨æˆ·åç§°
+	private String userName;
+	//ç”¨æˆ·è§’è‰²ç±»å‹ï¼ˆæ¥æºäºæ•°æ®å­—å…¸è¡¨ï¼Œåˆ†ä¸ºï¼šè¶…ç®¡ã€è´¢åŠ¡ã€å¸‚åœºã€è¿è¥ã€é”€å”®ï¼‰
+	private Integer userType;
+	//åˆ›å»ºè€…ï¼ˆæ¥æºäºbackend_userç”¨æˆ·è¡¨çš„ç”¨æˆ·idï¼‰
+	private Integer createdBy;
+	//åˆ›å»ºæ—¶é—´ 
+	private  Date creationDate;
+	//æ›´æ–°è€…ï¼ˆæ¥æºäºbackend_userç”¨æˆ·è¡¨çš„ç”¨æˆ·idï¼‰
+	private Integer modifyBy;
+	//æœ€æ–°æ›´æ–°æ—¶é—´      
+	private Date modifyDate;
+	//ç”¨æˆ·å¯†ç 
+	private String userPassword;
 	public Integer getId() {
 		return id;
 	}
@@ -60,11 +71,11 @@ public class BackendUser {
 	public void setModifyBy(Integer modifyBy) {
 		this.modifyBy = modifyBy;
 	}
-	public Date getDateTime() {
-		return dateTime;
+	public Date getModifyDate() {
+		return modifyDate;
 	}
-	public void setDateTime(Date dateTime) {
-		this.dateTime = dateTime;
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
 	}
 	public String getUserPassword() {
 		return userPassword;
@@ -73,7 +84,7 @@ public class BackendUser {
 		this.userPassword = userPassword;
 	}
 	public BackendUser(Integer id, String userCode, String userName, Integer userType, Integer createdBy,
-			Date creationDate, Integer modifyBy, Date dateTime, String userPassword) {
+			Date creationDate, Integer modifyBy, Date modifyDate, String userPassword) {
 		super();
 		this.id = id;
 		this.userCode = userCode;
@@ -82,13 +93,12 @@ public class BackendUser {
 		this.createdBy = createdBy;
 		this.creationDate = creationDate;
 		this.modifyBy = modifyBy;
-		this.dateTime = dateTime;
+		this.modifyDate = modifyDate;
 		this.userPassword = userPassword;
 	}
-	
 	public BackendUser() {
 		super();
 	}
 	
-	
+
 }

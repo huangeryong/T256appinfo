@@ -3,6 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.sq.appinfo.dao.BackendUserDao">
+	<!--后台登录方法-->
 	<select id="getBackUserByUserCodeAndUserPassword" resultType="backendUser">
 		select * from backendUser where userCode=#{userCode} and userPassword=#{userPassword}
 	</select>

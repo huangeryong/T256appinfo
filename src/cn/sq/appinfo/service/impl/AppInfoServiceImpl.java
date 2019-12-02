@@ -17,9 +17,21 @@ public class AppInfoServiceImpl implements AppInfoService{
 	private AppInfoDao infoDao;
 
 	@Override
-	public List<AppInfo> getFindIfInfo() {
+	public List<AppInfo> getFindIfInfo(String softwareName,Integer status,Integer categoryLevel1,Integer categoryLevel2,Integer categoryLevel3,Integer flatformId,Integer devId) {
 
-		return infoDao.getFindIfInfo();
+		return infoDao.getFindIfInfo(softwareName, status, categoryLevel1, categoryLevel2, categoryLevel3, flatformId, devId);
+	}
+
+	@Override
+	public Integer getAddInfo(AppInfo appInfo) {
+		
+		return infoDao.getAddInfo(appInfo);
+	}
+
+	@Override
+	public AppInfo checkName(String apkName) {
+
+		return infoDao.checkName(apkName);
 	}
 	
 }
